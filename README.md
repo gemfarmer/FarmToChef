@@ -32,6 +32,7 @@ Your app should now be live. To view it run
 	cd dist && heroku open`
 
 #### Deployment
+Follow these for successful deployments
 `After app modification run
 	grunt build
 Then deploy with
