@@ -10,5 +10,32 @@ This is an application to facilitate the connection between Twin Cities farmers 
 * native app compatability: phone gap / cordova.js
 * deployment: heroku/aws/grunt build-control
 
+#### Social Media Login integration
+
+`Because you're using mongoose, you must add mongoDB to your heroku app.
+	from `/dist`: heroku addons:add mongohq
+
+You will need to set environment variables for facebook auth. From `/dist`:
+	heroku config:set FACEBOOK_ID=appId
+	heroku config:set FACEBOOK_SECRET=secret
+
+You will need to set environment variables for google auth. From `/dist`:
+	heroku config:set GOOGLE_ID=appId
+	heroku config:set GOOGLE_SECRET=secret
+
+You will need to set environment variables for twitter auth. From `/dist`:
+	heroku config:set TWITTER_ID=appId
+	heroku config:set TWITTER_SECRET=secret
+
+
+Your app should now be live. To view it run
+	cd dist && heroku open`
+
+#### Deployment
+`After app modification run
+	grunt build
+Then deploy with
+	grunt buildcontrol:heroku`
+	
 #### UI/UX
 
